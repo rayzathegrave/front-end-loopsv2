@@ -13,9 +13,11 @@ const scores = [
 // 83
 // 77
 // 92
-// 66
+// 66ç
 // ==========================================
-
+for (let i = 0; i < scores.length; i++) {
+    console.log(scores[i].name + "'s score is: " + scores[i].score);
+}
 
 
 
@@ -31,9 +33,28 @@ const scores = [
 // A
 // D
 // ==========================================
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i].score < 60){
+        console.log(scores[i].name + "'s score is: F");
 
-
-
+        continue;
+    }
+    if (scores[i].score < 70){
+        console.log(scores[i].name + "'s score is: D");
+        continue;
+    }
+    if (scores[i].score < 80){
+        console.log(scores[i].name + "'s score is: C");
+        continue;
+    }
+    if (scores[i].score < 90){
+        console.log(scores[i].name + "'s score is: B");
+        continue;
+    }
+    else {console.log(scores[i].name + "'s score is: A");
+        continue;
+    }
+}
 
 
 // ==========================================
@@ -48,7 +69,37 @@ const scores = [
 //  { name: 'Rianne', score: 66, grade: 'D' }
 //  ];
 // ==========================================
+console.log(scores)
 
+
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i].score < 60){
+        console.log(scores[i].name + "'s score is: F");
+        scores[i].grade = "F"
+        continue;
+    }
+    if (scores[i].score < 70){
+        console.log(scores[i].name + "'s score is: D");
+        scores[i].grade = "D"
+        continue;
+    }
+    if (scores[i].score < 80){
+        console.log(scores[i].name + "'s score is: C");
+        scores[i].grade = "C"
+        continue;
+    }
+    if (scores[i].score < 90){
+        console.log(scores[i].name + "'s score is: B");
+        scores[i].grade = "B"
+        continue;
+    }
+    else {console.log(scores[i].name + "'s score is: A");
+        scores[i].grade = "A"
+        continue;
+    }
+}
+
+console.log(scores)
 
 
 
@@ -75,7 +126,12 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+for (let i = 0; i < NOVIEmployees.length; i++) {
 
+    const email = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl";
+
+    console.log("firstName: '" + NOVIEmployees[i].firstName + "', '"+ NOVIEmployees[i].lastName  + "', '"+  "email:" + email.toLowerCase());
+}
 
 
 
@@ -83,7 +139,7 @@ const NOVIEmployees = [
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
-
+// toLowerCase
 
 
 
@@ -131,5 +187,22 @@ const students = [
 // ]
 // ==========================================
 
-
-
+for (let i = 0; i < students.length; i++) {
+    switch (students[i].zipCode) {
+        case "3513": students[i].neighborhood = "Pijlsweerd";
+            break;
+        case "3514": students[i].neighborhood = "Vogelenbuurt";
+            break;
+        case "3512": students[i].neighborhood = "Binnenstad";
+            break;
+        case "3531": students[i].neighborhood = "Lombok";
+            break;
+        case "3572": students[i].neighborhood = "Wittevrouwen";
+            break;
+        case "3581": students[i].neighborhood = "Oudwijk";
+            break;
+        case "3583": students[i].neighborhood = "Schildersbuurt";
+            break;
+    }
+    console.log("name: '" + students[i].name + "', city:  '" + students[i].city + "', zipCode: '" + students[i].zipCode + "', neighborhood: '" + students[i].neighborhood + "'");
+}
