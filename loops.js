@@ -1,4 +1,5 @@
 // ==========================================
+
 // Opdracht 1. Maak een for loop die het volgende patroon in de terminal print:
 // Verwachte uitkomsten:
 // *
